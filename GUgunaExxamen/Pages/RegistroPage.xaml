@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GUgunaExxamen.Pages.RegistroPage"
+             Title="Registro">
+    <ScrollView>
+        <VerticalStackLayout Padding="20,18" Spacing="16">
+            <Label x:Name="UsuarioLabel" Text="Usuario conectado" HorizontalTextAlignment="End" TextColor="#6B7280" />
+            <Label Text="REGISTRO" Style="{StaticResource PageTitle}" />
+
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,*"
+                  RowSpacing="10" ColumnSpacing="12">
+                <Label Grid.Row="0" Grid.Column="0" Text="Fecha" Style="{StaticResource SectionLabel}" />
+                <Border Grid.Row="0" Grid.Column="1" Style="{StaticResource FormBorder}">
+                    <DatePicker x:Name="FechaPicker" Format="dd/MM/yyyy" />
+                </Border>
+                <Label Grid.Row="1" Grid.Column="0" Text="País" Style="{StaticResource SectionLabel}" />
+                <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource FormBorder}">
+                    <Picker x:Name="PaisPicker" Title="Selecciona un país" ItemsSource="{Binding Paises}" SelectedIndexChanged="OnPaisChanged" />
+                </Border>
+                <Label Grid.Row="2" Grid.Column="0" Text="Ciudad" Style="{StaticResource SectionLabel}" />
+                <Border Grid.Row="2" Grid.Column="1" Style="{StaticResource FormBorder}">
+                    <Picker x:Name="CiudadPicker" Title="Selecciona una ciudad" ItemsSource="{Binding Ciudades}" />
+                </Border>
+                <Label Grid.Row="3" Grid.Column="0" Text="Monto inicial" Style="{StaticResource SectionLabel}" />
+                <Border Grid.Row="3" Grid.Column="1" Style="{StaticResource FormBorder}">
+                    <Entry x:Name="MontoInicialEntry" Placeholder="0,00" Keyboard="Numeric" TextChanged="OnMontoInicialChanged" />
+                </Border>
+                <Label Grid.Row="4" Grid.Column="0" Text="Pago mensual" Style="{StaticResource SectionLabel}" />
+                <Border Grid.Row="4" Grid.Column="1" Style="{StaticResource FormBorder}">
+                    <Entry x:Name="PagoMensualEntry" IsReadOnly="True" TextColor="#B91C1C" />
+                </Border>
+            </Grid>
+
+            <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="*,*,*" ColumnSpacing="10" RowSpacing="6">
+                <Label Grid.Row="0" Grid.Column="0" Text="Nombre" Style="{StaticResource SectionLabel}" />
+                <Label Grid.Row="0" Grid.Column="1" Text="Apellido" Style="{StaticResource SectionLabel}" />
+                <Label Grid.Row="0" Grid.Column="2" Text="Edad" Style="{StaticResource SectionLabel}" />
+                <Border Grid.Row="1" Grid.Column="0" Style="{StaticResource FormBorder}">
+                    <Entry x:Name="NombreEntry" Placeholder="Nombre" />
+                </Border>
+                <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource FormBorder}">
+                    <Entry x:Name="ApellidoEntry" Placeholder="Apellido" />
+                </Border>
+                <Border Grid.Row="1" Grid.Column="2" Style="{StaticResource FormBorder}">
+                    <Entry x:Name="EdadEntry" Placeholder="Edad" Keyboard="Numeric" />
+                </Border>
+            </Grid>
+
+            <Button Text="VER RESUMEN" Clicked="OnVerResumenClicked" BackgroundColor="#B91C1C" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

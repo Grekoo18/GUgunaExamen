@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GUgunaExxamen.Pages.ResumenPage"
+             Title="Resumen">
+    <ScrollView>
+        <VerticalStackLayout Padding="20,18" Spacing="16">
+            <Label x:Name="UsuarioLabel" Text="Usuario conectado" HorizontalTextAlignment="End" TextColor="#6B7280" />
+            <Label Text="RESUMEN" Style="{StaticResource PageTitle}" />
+
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                  ColumnDefinitions="*,*" RowSpacing="1" BackgroundColor="#D1D5DB">
+                <Label Grid.Row="0" Grid.Column="0" Text="Nombre" Style="{StaticResource SectionLabel}" BackgroundColor="White" Padding="10" />
+                <Label Grid.Row="0" Grid.Column="1" x:Name="NombreLabel" BackgroundColor="White" Padding="10" />
+                <Label Grid.Row="1" Grid.Column="0" Text="Apellido" Style="{StaticResource SectionLabel}" BackgroundColor="White" Padding="10" />
+                <Label Grid.Row="1" Grid.Column="1" x:Name="ApellidoLabel" BackgroundColor="White" Padding="10" />
+                <Label Grid.Row="2" Grid.Column="0" Text="Edad" Style="{StaticResource SectionLabel}" BackgroundColor="White" Padding="10" />
+                <Label Grid.Row="2" Grid.Column="1" x:Name="EdadLabel" BackgroundColor="White" Padding="10" />
+                <Label Grid.Row="3" Grid.Column="0" Text="Fecha" Style="{StaticResource SectionLabel}" BackgroundColor="White" Padding="10" />
+                <Label Grid.Row="3" Grid.Column="1" x:Name="FechaLabel" BackgroundColor="White" Padding="10" />
+                <Label Grid.Row="4" Grid.Column="0" Text="Ciudad" Style="{StaticResource SectionLabel}" BackgroundColor="White" Padding="10" />
+                <Label Grid.Row="4" Grid.Column="1" x:Name="CiudadLabel" BackgroundColor="White" Padding="10" />
+                <Label Grid.Row="5" Grid.Column="0" Text="País" Style="{StaticResource SectionLabel}" BackgroundColor="White" Padding="10" />
+                <Label Grid.Row="5" Grid.Column="1" x:Name="PaisLabel" BackgroundColor="White" Padding="10" />
+                <Label Grid.Row="6" Grid.Column="0" Text="Monto inicial" Style="{StaticResource SectionLabel}" BackgroundColor="White" Padding="10" />
+                <Label Grid.Row="6" Grid.Column="1" x:Name="MontoInicialLabel" BackgroundColor="White" Padding="10" />
+                <Label Grid.Row="7" Grid.Column="0" Text="Pago mensual" Style="{StaticResource SectionLabel}" BackgroundColor="White" Padding="10" />
+                <Label Grid.Row="7" Grid.Column="1" x:Name="PagoMensualLabel" BackgroundColor="White" Padding="10" />
+                <Label Grid.Row="8" Grid.Column="0" Text="Pago total" Style="{StaticResource SectionLabel}" BackgroundColor="White" Padding="10" />
+                <Label Grid.Row="8" Grid.Column="1" x:Name="PagoTotalLabel" BackgroundColor="White" Padding="10" />
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
