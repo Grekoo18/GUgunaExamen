@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GUgunaExxamen.Pages.RegistroPage"
+             BackgroundColor="#FFFFFF"
              Title="Registro">
     <ScrollView>
         <VerticalStackLayout Padding="20,18" Spacing="16">
@@ -12,15 +13,17 @@
                   RowSpacing="10" ColumnSpacing="12">
                 <Label Grid.Row="0" Grid.Column="0" Text="Fecha" Style="{StaticResource SectionLabel}" />
                 <Border Grid.Row="0" Grid.Column="1" Style="{StaticResource FormBorder}">
-                    <DatePicker x:Name="FechaPicker" Format="dd/MM/yyyy" />
+                    <DatePicker x:Name="FechaPicker" Format="dd/MM/yyyy" TextColor="#111827" />
                 </Border>
                 <Label Grid.Row="1" Grid.Column="0" Text="País" Style="{StaticResource SectionLabel}" />
                 <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource FormBorder}">
-                    <Picker x:Name="PaisPicker" Title="Selecciona un país" ItemsSource="{Binding Paises}" SelectedIndexChanged="OnPaisChanged" />
+                    <Picker x:Name="PaisPicker" Title="Selecciona un país" TextColor="#111827" TitleColor="#6B7280"
+                            ItemsSource="{Binding Paises}" SelectedIndexChanged="OnPaisChanged" />
                 </Border>
                 <Label Grid.Row="2" Grid.Column="0" Text="Ciudad" Style="{StaticResource SectionLabel}" />
                 <Border Grid.Row="2" Grid.Column="1" Style="{StaticResource FormBorder}">
-                    <Picker x:Name="CiudadPicker" Title="Selecciona una ciudad" ItemsSource="{Binding Ciudades}" />
+                    <Picker x:Name="CiudadPicker" Title="Selecciona una ciudad" TextColor="#111827" TitleColor="#6B7280"
+                            ItemsSource="{Binding Ciudades}" />
                 </Border>
                 <Label Grid.Row="3" Grid.Column="0" Text="Monto inicial" Style="{StaticResource SectionLabel}" />
                 <Border Grid.Row="3" Grid.Column="1" Style="{StaticResource FormBorder}">
